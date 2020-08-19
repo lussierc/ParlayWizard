@@ -22,7 +22,21 @@ def get_games():
         game_list.append(game_info)
         print(game_list)
 
-        # store in object here
+    # store in object here
     print("Finished entering information!")
+    return(game_list)
 
-get_games()
+def get_teams():
+    game_list = get_games()
+    game_counter = 0
+    for game in game_list:
+        game_counter += 1
+        print("--- Game #", game_counter, " ---")
+        for team in game:
+            print(team)
+            print("KEYS", team.keys())
+
+get_teams()
+# grab teams out of game_info using for loop
+# generate every possible winner combo using permutated lists (maybe?)
+# then calculate money for every parlay
