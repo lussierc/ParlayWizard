@@ -3,6 +3,7 @@
 
 def get_games():
     """Gets the user's chosen games for parlays."""
+    full_data_list = []
     data_dict={}
     num_of_games = int(input("* Enter number of games: "))
     game_list = []
@@ -24,24 +25,22 @@ def get_games():
         team2_dict = {team2:team2_odds}
         teams2_list.append(team2)
         data_dict.update(team2_dict)
-        
+
         print(data_dict)
 
 
 
     # store in object here
     print("Finished entering information!")
-    return(game_list)
+    full_data_list.append(teams1_list)
+    full_data_list.append(teams2_list)
+    full_data_list.append(data_dict)
+    print(full_data_list)
+    return(full_data_list)
 
 def get_teams():
     game_list = get_games()
-    game_counter = 0
-    for game in game_list:
-        game_counter += 1
-        print("--- Game #", game_counter, " ---")
-        for team in game:
-            print(team)
-            print("KEYS", team.keys())
+
 
 get_teams()
 # grab teams out of game_info using for loop
