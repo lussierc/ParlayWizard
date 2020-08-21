@@ -43,6 +43,13 @@ def get_teams():
 
 
 get_teams()
-# grab teams out of game_info using for loop
-# generate every possible winner combo using permutated lists (maybe?)
+
+# generate every possible winner combo using permutated lists (maybe?):::
+# above 4 teams > or get rid of it
+# if list contains team1 && team2 || team3 & team4 ... Get rid of it
+
 # then calculate money for every parlay
+# use lists to search dict with parlay odds
+# put in parlay caluclation
+# calculate how to get that garaunteed $
+# add single shot option
